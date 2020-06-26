@@ -1,0 +1,31 @@
+{% extends 'entregar/main.html' %}
+
+{% load crispy_forms_tags %}
+
+{% load bootstrap4 %}
+
+{% load static %}
+
+{% block content %}
+
+<br>
+<h5>Pode realizar ate 10 Pedidos de Uma Unica Vez</h5>
+<div class="row">
+    <div class="col-md-8">
+        <div class="card card-body">
+            <form action="" method="POST">
+                    {% csrf_token %}
+                    {{ formset.management_form }}
+                    {% for form in formset %}
+                        {{form|crispy}}
+                    <hr>
+                    {% endfor %}
+                    <input type="submit" name="Submit">
+                    <!-- <button type="submit" class="btn btn-primary">Gravar</button> -->
+            </form>
+         </div>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,178 @@
+{% extends 'entregar/main.html' %}
+
+{% load static %}
+
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<br>
+<style>
+    .profil{
+        max-width: 200px;
+        max-height: 200px;
+        margin: 0 auto;
+        border-radius: 50%;
+    }
+
+</style>
+
+<div class="card-deck " >
+  <div class="card " >
+   <img class="profil" class="card-img-top" src="{% static 'images/PizzaM.PNG' %}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" >Pizza Margarida Grande</h5>
+        <a type="button" class="btn btn-primary" href="#anchor" > Comprar</a>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted" class="font-weight-bold">Nova Pizza Disponivel</small>
+    </div>
+  </div>
+  <div class="card">
+   <img class="profil" class="card-img-top" src="{% static 'images/Feijoada.jpg' %}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Feijoada</h5>
+      <a type="button" class="btn btn-primary" href="#anchor">Comprar</a>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Novo Prato Disponivel</small>
+    </div>
+  </div>
+  <div class="card">
+    <img class="profil" class="card-img-top" src="{% static 'images/HambC.PNG' %}" alt="Card image cap">
+    <div class="card-body" class="text-justify">
+      <h5 class="card-title">Hamburguer Completo</h5>
+      <a type="button" class="btn btn-primary" href="#anchor">Comprar</a>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Novo Prato Disponivel</small>
+    </div>
+  </div>
+</div>
+<br>
+<div class="card-deck " >
+    <div class="card">
+    <img class="profil" class="card-img-top" src="{% static 'images/Lasanha.png' %}" alt="Card image cap">
+    <div class="card-body" class="text-justify">
+      <h5 class="card-title">Lasanha </h5>
+      <a type="button" class="btn btn-primary" href="#anchor">Comprar</a>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Novo Prato Disponivel</small>
+    </div>
+  </div>
+    <div class="card">
+    <img class="profil" class="card-img-top" src="{% static 'images/PizzaM.PNG' %}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Pizza Margarida Pequena</h5>
+      <a type="button" class="btn btn-primary" href="#anchor">Comprar</a>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Nova Pizza Disponivel</small>
+    </div>
+  </div>
+    <div class="card">
+    <img class="profil" class="card-img-top" src="{% static 'images/hamburguer.jpg' %}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Hamburguer Simples</h5>
+      <a type="button" class="btn btn-primary" href="#anchor">Comprar</a>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Novo item no seu Menu</small>
+    </div>
+  </div>
+</div>
+<br>
+<div class="card-deck " >
+    <div class="card">
+    <img class="profil" class="card-img-top" src="{% static 'images/BoloBanana.jpg' %}" alt="Card image cap">
+    <div class="card-body" class="text-justify">
+      <h5 class="card-title">Bolo de Banana </h5>
+      <a type="button" class="btn btn-primary" href="#anchor">Comprar</a>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Novo item no seu Menu</small>
+    </div>
+  </div>
+    <div class="card">
+    <img class="profil" class="card-img-top" src="{% static 'images/TortaMaca.png' %}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Torta de Maca</h5>
+      <a type="button" class="btn btn-primary" href="#anchor">Comprar</a>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Novo Prato Disponivel</small>
+    </div>
+  </div>
+    <div class="card">
+    <img class="profil" class="card-img-top" src="{% static 'images/CocaCola.jpg' %}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Coca Cola 2L</h5>
+      <a type="button" class="btn btn-primary" href="#anchor">Comprar</a>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Novo Refrigerante Disponivel</small>
+    </div>
+  </div>
+</div>
+<br>
+<div class="card-deck " >
+    <div class="card">
+    <img class="profil" class="card-img-top" src="{% static 'images/Fanta.jpg' %}" alt="Card image cap">
+    <div class="card-body" class="text-justify">
+      <h5 class="card-title"> Fanta 2L </h5>
+      <a type="button" class="btn btn-primary" href="#anchor">Comprar</a>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Novo Refrigerante Disponivel</small>
+    </div>
+  </div>
+    <div class="card">
+    <img class="profil" class="card-img-top" src="{% static 'images/Sparleta.jpg' %}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Sparletta 2L </h5>
+      <a type="button" class="btn btn-primary" href="#anchor">Comprar</a>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Novo Refrigerante Disponivel</small>
+    </div>
+  </div>
+    <div class="card">
+    <img class="profil" class="card-img-top" src="{% static 'images/Sprite.jpg' %}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Sprite 2L </h5>
+      <a type="button" class="btn btn-primary" href="#anchor">Comprar</a>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Novo Refrigerante Disponivel</small>
+    </div>
+  </div>
+</div>
+
+
+<br>
+ <div  class="card card-body">
+            <table class="table table-striped">
+                <tr>
+                    <th>Produto</th>
+                    <th>Preço  Mt</th>
+                </tr>
+                {% for i in products %}
+                    <tr>
+                        <td>{{i.name}}</td>
+                        <td>{{i.price}}</td>
+                    </tr>
+                {% endfor %}
+
+            </table>
+            <a class="btn btn-primary">Pode fazer o seu pedido ligando para 846795003</a>
+
+        </div>
+        <br>
+        <div class="col-md">
+             <a class="btn btn-warning" href="{% url 'home' %}" id="anchor">&#8592; Voltar ao Menu Principal</a>
+        </div>
+<br>
+
+{% endblock content %}

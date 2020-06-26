@@ -1,0 +1,31 @@
+{% extends 'entregar/main.html' %}
+{% block content %}
+{% include 'entregar/status.html'%}
+
+<div class="row">
+    <div class="col-md">
+        <div class="card card-body">
+            <table class="table table table-striped">
+                <tr>
+                    <th>Produto</th>
+                    <th>Nota</th>
+                    <th>Data da Encomenda</th>
+                    <th>Status</th>
+                </tr>
+
+                {% for order in orders %}
+                <tr>
+                    <td>{{order.product}}</td>
+                    <td>{{order.note}}</td>
+                    <td>{{order.date_created}}</td>
+                    <td>{{order.status}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}

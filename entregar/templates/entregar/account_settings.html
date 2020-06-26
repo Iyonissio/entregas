@@ -1,0 +1,48 @@
+{% extends 'entregar/main.html' %}
+
+{% load bootstrap4 %}
+
+{% load static %}
+
+{% block content %}
+
+<style>
+    .profile-pic{
+        max-width: 200px;
+        max-height: 200px;
+        margin: 0 auto;
+        border-radius: 50%;
+    }
+    body .gform_wrapper {
+    background-color: yellow;
+}
+
+</style>
+
+<br>
+<div class="row">
+    <div class="col-md-3">
+        <div class="card card-body">
+            <h5>Cliente:</h5>
+            <a class="btn btn-warning" href="{% url 'home' %}">&#8592; Voltar ao Menu Principal</a>
+            <hr>
+            <h3 style="text-align:center">Foto de Perfil</h3>
+            <hr>
+            <img class="profile-pic" src="{{request.user.customer.profile_pic.url}}">
+        </div>
+    </div>
+    <div class="col-md-8" >
+        <div class="card card-body " class"gform_wrapper">
+            
+            <form method="POST" action="" enctype="multipart/form-data" class="form-group col-md-6" >
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                {% buttons %}
+                    <button type="submit" class="btn btn-primary">Gravar</button>
+                {% endbuttons %}
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
